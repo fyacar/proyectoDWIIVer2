@@ -1,0 +1,23 @@
+
+<body>
+<img src="../../../assets/imagenes/logoLogin.jpg">
+<h1>Iniciar Sesión</h1>
+<mat-card class="contenedor">
+    <mat-card-content>
+        <div class="form">            
+            <mat-form-field class="full-width">
+                <mat-label>Ingrese su Usuario</mat-label>
+                <input matInput type="text" #txtusuario>            
+            </mat-form-field>            
+            <mat-form-field class="full-width">
+                <mat-label >Ingrese su Contraseña</mat-label>
+                <input matInput type="password" #txtpassword>            
+            </mat-form-field>
+        </div>
+    </mat-card-content>
+    <mat-card-actions class="btn">
+      <button mat-raised-button (click)="submit(txtpassword,txtusuario)" >Ingresar</button>    
+    </mat-card-actions>
+</mat-card>
+  <br>
+</body>

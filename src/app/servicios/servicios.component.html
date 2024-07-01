@@ -1,0 +1,71 @@
+<body>
+<div class="contenedor">
+<div class="menuu"></div>
+<div class="menu">
+    <img class="img-logo" src="../../../assets/imagenes/logoLogin.jpg">
+    <ul>
+        <li (click)="irInicio()">Inicio</li>
+        <li (click)="irServicios()" >Servicios</li>        
+        <li (click)="irReserva()" >Reserva</li>
+        <li (click)="irDashboard()">Dashboard</li>
+    </ul>
+</div>
+
+<div class="contenido">
+ <!-- Combobox
+    <mat-form-field>
+        <mat-label>Favorite food</mat-label>
+        <mat-select [(ngModel)]="selectedValue" name="food">
+          @for (food of foods; track food) {
+            <mat-option [value]="food.value">{{food.viewValue}}</mat-option>
+          }
+        </mat-select>
+    </mat-form-field>   
+-->
+    <form class="example-form buscador">
+        <mat-form-field class="example-full-width">
+          <mat-label>Entrada</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field> 
+        <mat-form-field class="example-full-width">
+            <mat-label>Entrada</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field> 
+        <mat-form-field class="example-full-width">
+            <mat-label>Entrada</mat-label>
+            <input matInput placeholder="Ex. Pizza" value="">
+        </mat-form-field> 
+        <button class="btn-buscar" mat-raised-button>BUSCAR</button>
+    </form>
+
+<div class="cards-section"> 
+    <div class="cards-contenedor">
+    @for (item of foods; track $index) {
+    <mat-card class="example-card">
+        <mat-card-header>          
+          <mat-card-title>Nombre Empresa</mat-card-title>         
+        </mat-card-header>
+        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
+        <mat-card-content>
+          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
+          </p>
+        </mat-card-content>
+        <mat-card-actions>          
+          <button mat-button>Reservar</button>
+        </mat-card-actions>
+    </mat-card>
+}
+    </div>
+    <mat-paginator [length]="100"
+    [pageSize]="10"
+    [pageSizeOptions]="[5, 10, 25, 100]"
+    aria-label="Select page">
+    </mat-paginator> 
+</div>
+
+
+
+</div>
+</div>
+
+</body>
