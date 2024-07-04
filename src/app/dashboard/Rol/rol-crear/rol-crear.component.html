@@ -1,0 +1,20 @@
+<body>  
+  <h1>Crear Rol</h1>
+  <mat-card class="contenedor">
+      <mat-card-content>
+          <div class="form">            
+              <mat-form-field class="full-width">
+                  <mat-label>Descripción</mat-label>
+                  <input matInput type="text" #txtdescripcion>            
+              </mat-form-field> 
+              <mat-checkbox #activo class="example-margin">Activo</mat-checkbox>
+          </div>
+      </mat-card-content>
+      <mat-card-actions class="btn">
+       
+        <button mat-raised-button (click)="crear(activo.checked,txtdescripcion)">Crear</button>    
+      </mat-card-actions>
+  </mat-card>
+    <br>
+  </body>
+  

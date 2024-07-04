@@ -12,6 +12,9 @@ import { ProductosComponent } from './dashboard/Producto/productos/productos.com
 import { ReservasComponent } from './dashboard/Reserva/reservas/reservas.component';
 import { RolesComponent } from './dashboard/Rol/roles/roles.component';
 import { UsuariosComponent } from './dashboard/Usuario/usuarios/usuarios.component';
+import { RolDetallesComponent } from './dashboard/Rol/rol-detalles/rol-detalles.component';
+import { RolCrearComponent } from './dashboard/Rol/rol-crear/rol-crear.component';
+
 
 export const routes: Routes = [
     { path: "inicio", component: InicioComponent},
@@ -26,6 +29,8 @@ export const routes: Routes = [
         {path:"productos", component: ProductosComponent},
         {path:"reservas", component: ReservasComponent},
         {path:"roles", component: RolesComponent},
+        {path:"roles/:id", component: RolDetallesComponent},
+        {path:"crearrol", component: RolCrearComponent},
         {path:"usuarios", component: UsuariosComponent}
     ]},
 ];

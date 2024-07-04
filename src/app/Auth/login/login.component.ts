@@ -16,6 +16,8 @@ export class LoginComponent {
   }
 
   submit(usuario:HTMLInputElement, password: HTMLInputElement):void{
+    console.log("Usuario:", usuario.value);
+    console.log("Password:", password.value);
     this.router.navigateByUrl("/dashboard")
   }
 
