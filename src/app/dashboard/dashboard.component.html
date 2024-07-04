@@ -1,1 +1,19 @@
-<p>dashboard works!</p>
+<div class="contenedorPrincipal">
+<div class="menuu"></div>
+<div class="menu">
+    <img class="img-logo" src="../../../assets/imagenes/logoLogin.jpg">
+    <ul>
+        <li (click)="irCategorias()">Categorias</li>
+        <li (click)="irCiudades()">Ciudades</li>        
+        <li (click)="irEmpresas()" >Empresas</li>
+        <li (click)="irProductos()">Productos</li>
+        <li (click)="irReserva()">Reservas</li>
+        <li (click)="irRol()">Roles</li>
+        <li (click)="irUsuario()">Usuarios</li>
+    </ul>
+</div>
+
+<div class="contenedorHijos">
+    <router-outlet></router-outlet>
+</div>
+</div>
