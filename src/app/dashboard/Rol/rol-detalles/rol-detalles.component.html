@@ -1,21 +1,27 @@
-<p>rol-detalles works!</p>
-<p>{{rolId}}</p>
-<body>  
-    <h1>Editar Rol</h1>
-    <mat-card class="contenedor">
-        <mat-card-content>
-            <div class="form">            
-                <mat-form-field class="full-width">
-                    <mat-label>Descripción</mat-label>
-                    <input matInput type="text" #txtdescripcion [(ngModel)]="descripcion">            
-                </mat-form-field> 
-                <mat-checkbox #activo class="example-margin" [(ngModel)]="activo">Activo</mat-checkbox>
-            </div>
-        </mat-card-content>
-        <mat-card-actions class="btn">
-         
-          <button mat-raised-button (click)="actualizarRol(activo.checked,txtdescripcion)">Actualizar</button>    
-        </mat-card-actions>
-    </mat-card>
-      <br>
-    </body>
+{{rolId}}
+<div class="contenedorPrincipal">
+    <div class="module-header">
+        <div class="left">
+            <h1>{{ formTitulo }}</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="form-container">
+        <form class="form" [formGroup]="rolForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input matInput name="idrol" formControlName="idrol" />
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input matInput name="descripcion" formControlName="descripcion" />
+            </mat-form-field>
+            
+            <mat-checkbox formControlName="isActivo">Activo</mat-checkbox>
+        </form>
+        <div class="btnGuardar">
+            <button mat-raised-button color="primary" (click)="guardarRol()">Guardar</button>
+        </div>
+    </div>
+</div>

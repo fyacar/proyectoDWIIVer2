@@ -4,6 +4,13 @@ import { ActivatedRoute, Router } from '@angular/router';
 import { Rol } from '../rol';
 import { MaterialModule } from '../../../angular-material/material/material.module';
 
+
+enum FormType{
+  Crear = 0,
+  Actualizar = 1
+}
+
+
 @Component({
   selector: 'app-roles',
   standalone: true,
@@ -44,6 +51,6 @@ export class RolesComponent {
       this.router.navigate([rolId],{relativeTo: this.route});
     }
     IrCrearRol():void{
-      this.router.navigate(['dashboard/crearrol']);
+      this.router.navigate(["crear"],{relativeTo: this.route});
     }
 }

@@ -13,7 +13,7 @@ import { ReservasComponent } from './dashboard/Reserva/reservas/reservas.compone
 import { RolesComponent } from './dashboard/Rol/roles/roles.component';
 import { UsuariosComponent } from './dashboard/Usuario/usuarios/usuarios.component';
 import { RolDetallesComponent } from './dashboard/Rol/rol-detalles/rol-detalles.component';
-import { RolCrearComponent } from './dashboard/Rol/rol-crear/rol-crear.component';
+import { CiudadDetalleComponent } from './dashboard/Ciudad/ciudad-detalle/ciudad-detalle.component';
 
 
 export const routes: Routes = [
@@ -25,12 +25,12 @@ export const routes: Routes = [
     { path: "dashboard", component: DashboardComponent, children: [
         {path:"categorias", component: CategoriasComponent},
         {path:"ciudades", component: CiudadesComponent},
+        {path:"ciudades/:id", component: CiudadDetalleComponent},
         {path:"empresas", component: EmpresasComponent},
         {path:"productos", component: ProductosComponent},
         {path:"reservas", component: ReservasComponent},
         {path:"roles", component: RolesComponent},
         {path:"roles/:id", component: RolDetallesComponent},
-        {path:"crearrol", component: RolCrearComponent},
         {path:"usuarios", component: UsuariosComponent}
     ]},
 ];
