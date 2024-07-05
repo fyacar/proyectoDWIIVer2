@@ -63,7 +63,7 @@ export class RolDetallesComponent {
     if(this.formType === FormType.Crear){
       this.registrarRol(this.rolForm.value)
     }else{
-      const rolValue = {...this.rolForm.value, idrol: this.rolId }
+      const rolValue = {...this.rolForm.value, idrol: Number(this.rolId) }
       this.actualizarRol(rolValue)
     }
   }

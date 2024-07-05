@@ -4,7 +4,7 @@
 .menuu{
     display: flex;    
     flex-direction: column;
-    width: 13%;
+    width: 12%;
     background-color:black;
     height: 100vh;   
     align-items: center;
