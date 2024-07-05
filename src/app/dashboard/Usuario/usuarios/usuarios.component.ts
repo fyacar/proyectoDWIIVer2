@@ -7,12 +7,6 @@ import { FormsModule } from '@angular/forms';
 import { CommonModule } from '@angular/common';
 
 
-enum FormType{
-  Crear = 0,
-  Actualizar = 1
-}
-
-
 
 @Component({
   selector: 'app-usuarios',

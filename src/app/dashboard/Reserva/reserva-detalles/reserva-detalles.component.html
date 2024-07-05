@@ -1,1 +1,58 @@
-<p>reserva-detalles works!</p>
+{{reservaId}}
+<div class="contenedorPrincipal">
+    <div class="module-header">
+        <div class="left">
+            <h1>{{ formTitulo }}</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="form-container">
+        <form class="form" [formGroup]="reservaForm">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input matInput name="id" formControlName="id" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>fecha_reserva</mat-label>
+                <input matInput name="fecha_reserva" formControlName="fecha_reserva" />
+            </mat-form-field> 
+            <mat-form-field appearance="outline">
+                <mat-label>idusuario</mat-label>
+                <input matInput name="idusuario" formControlName="idusuario" />
+            </mat-form-field> 
+
+            <mat-form-field appearance="outline">
+                <mat-label>idproducto</mat-label>
+                <input matInput name="idproducto" formControlName="idproducto" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>cantPerson</mat-label>
+                <input matInput name="cantPerson" formControlName="cantPerson" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>cantDias</mat-label>
+                <input matInput name="cantDias" formControlName="cantDias" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>subTotal</mat-label>
+                <input matInput name="subTotal" formControlName="subTotal" />
+            </mat-form-field>            
+            <mat-form-field appearance="outline">
+                <mat-label>fecha_registro </mat-label>
+                <input matInput name="fecha_registro" formControlName="fecha_registro" />
+            </mat-form-field>            
+            <mat-form-field appearance="outline">
+                <mat-label>idestado</mat-label>
+                <input matInput name="idestado" formControlName="idestado" />
+            </mat-form-field>           
+        </form>
+
+        <div class="btnGuardar">
+            <button mat-raised-button color="primary" (click)="guardarReserva()">Guardar</button>
+        </div>
+    </div>
+</div>

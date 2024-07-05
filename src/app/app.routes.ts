@@ -18,6 +18,7 @@ import { CategoriaDetalleComponent } from './dashboard/Categoria/categoria-detal
 import { EmpresaDetallesComponent } from './dashboard/Empresa/empresa-detalles/empresa-detalles.component';
 import { ProductoDetallesComponent } from './dashboard/Producto/producto-detalles/producto-detalles.component';
 import { UsuarioDetallesComponent } from './dashboard/Usuario/usuario-detalles/usuario-detalles.component';
+import { ReservaDetallesComponent } from './dashboard/Reserva/reserva-detalles/reserva-detalles.component';
 
 
 export const routes: Routes = [
@@ -36,6 +37,7 @@ export const routes: Routes = [
         {path:"productos", component: ProductosComponent},
         {path:"productos/:id", component: ProductoDetallesComponent},
         {path:"reservas", component: ReservasComponent},
+        {path:"reservas/:id", component: ReservaDetallesComponent},
         {path:"roles", component: RolesComponent},
         {path:"roles/:id", component: RolDetallesComponent},
         {path:"usuarios", component: UsuariosComponent},

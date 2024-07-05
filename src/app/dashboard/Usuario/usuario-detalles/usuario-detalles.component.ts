@@ -44,6 +44,7 @@ export class UsuarioDetallesComponent {
 
   formulario():FormGroup{
     return new FormGroup({
+      
       id: new FormControl(""),
       nombres: new FormControl("") ,
       apellidos: new FormControl("") ,  

@@ -1,1 +1,58 @@
-<p>reservas works!</p>
+<div class="contenedorPrincipal">
+    <h1> Lista de Reservas</h1>
+    <div class="contenedor-icon-crear">
+      <mat-icon (click)="IrCrearReserva()" class="clic-icon crear-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="add"></mat-icon>
+    </div>
+    <table mat-table [dataSource]="reservas" class="mat-elevation-z8"> 
+
+        <ng-container matColumnDef="id">
+          <th mat-header-cell *matHeaderCellDef> Id </th>
+          <td mat-cell *matCellDef="let element"> {{element.id}} </td>
+        </ng-container>         
+    
+        <ng-container matColumnDef="fecha_reserva">
+          <th mat-header-cell *matHeaderCellDef> fecha_reserva </th>
+          <td mat-cell *matCellDef="let element"> {{element.fecha_reserva  | date: 'dd-MM-yyyy'}} </td>
+        </ng-container> 
+        <ng-container matColumnDef="idusuario">
+            <th mat-header-cell *matHeaderCellDef> idusuario </th>
+            <td mat-cell *matCellDef="let element"> {{element.idusuario}} </td>
+          </ng-container> 
+        <ng-container matColumnDef="idproducto">
+            <th mat-header-cell *matHeaderCellDef> idproducto </th>
+            <td mat-cell *matCellDef="let element"> {{element.idproducto}} </td>
+        </ng-container> 
+        <ng-container matColumnDef="cantPerson">
+            <th mat-header-cell *matHeaderCellDef> cantPerson </th>
+            <td mat-cell *matCellDef="let element"> {{element.cantPerson}} </td>
+        </ng-container> 
+        <ng-container matColumnDef="cantDias">
+            <th mat-header-cell *matHeaderCellDef> cantDias </th>
+            <td mat-cell *matCellDef="let element"> {{element.cantDias}} </td>
+        </ng-container> 
+        <ng-container matColumnDef="subTotal">
+            <th mat-header-cell *matHeaderCellDef> subTotal </th>
+            <td mat-cell *matCellDef="let element"> {{element.subTotal}} </td>
+        </ng-container>       
+
+
+        <ng-container matColumnDef="fecha_registro">
+            <th mat-header-cell *matHeaderCellDef> fecha_registro </th>
+            <td mat-cell *matCellDef="let element"> {{element.fecha_registro | date: 'dd-MM-yyyy'}} </td>
+        </ng-container>
+      
+        <ng-container matColumnDef="idestado">
+            <th mat-header-cell *matHeaderCellDef> idestado </th>
+            <td mat-cell *matCellDef="let element"> {{element.idestado}} </td>
+        </ng-container>        
+        
+        <ng-container matColumnDef="editar">
+          <th mat-header-cell *matHeaderCellDef>  </th>
+          <td mat-cell *matCellDef="let element">  <mat-icon (click)="IrEditarReserva(element.id)" class="clic-icon" aria-hidden="false" aria-label="Example home icon" fontIcon="edit"></mat-icon> </td>
+        </ng-container>    
+      
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"
+         ></tr>
+      </table>
+    </div>
