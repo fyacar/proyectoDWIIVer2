@@ -43,9 +43,6 @@ export class RolesComponent {
         this.roles =data;
       } );
     }  
-
-
-
   */
     IrEditarRol(rolId: number):void{
       this.router.navigate([rolId],{relativeTo: this.route});

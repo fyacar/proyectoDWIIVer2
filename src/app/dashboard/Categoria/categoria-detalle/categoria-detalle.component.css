@@ -1,0 +1,17 @@
+
+h1{
+    text-align: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;
+    align-items: center;    
+}
+
+mat-form-field{
+    width: 100%;
+    align-self: center;
+}
+.btnGuardar{
+    align-self: center;
+}

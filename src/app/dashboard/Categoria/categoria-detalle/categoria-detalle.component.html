@@ -1,1 +1,31 @@
-<p>categoria-detalle works!</p>
+{{cateogoriaId}}
+<div class="contenedorPrincipal">
+    <div class="module-header">
+        <div class="left">
+            <h1>{{ formTitulo }}</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="form-container">
+        <form class="form" [formGroup]="CategoriaForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input matInput name="id" formControlName="id" />
+            </mat-form-field>
+    
+            <mat-form-field appearance="outline">
+                <mat-label>Nombre</mat-label>
+                <input matInput name="nombres" formControlName="nombres" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input matInput name="descripcion" formControlName="descripcion" />
+            </mat-form-field>
+            
+            <mat-checkbox formControlName="isActivo">Activo</mat-checkbox>
+        </form>
+        <div class="btnGuardar">
+            <button mat-raised-button color="primary" (click)="guardarCategoria()">Guardar</button>
+        </div>
+    </div>
+</div>
