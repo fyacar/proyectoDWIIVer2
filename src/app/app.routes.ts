@@ -16,6 +16,7 @@ import { RolDetallesComponent } from './dashboard/Rol/rol-detalles/rol-detalles.
 import { CiudadDetalleComponent } from './dashboard/Ciudad/ciudad-detalle/ciudad-detalle.component';
 import { CategoriaDetalleComponent } from './dashboard/Categoria/categoria-detalle/categoria-detalle.component';
 import { EmpresaDetallesComponent } from './dashboard/Empresa/empresa-detalles/empresa-detalles.component';
+import { ProductoDetallesComponent } from './dashboard/Producto/producto-detalles/producto-detalles.component';
 
 
 export const routes: Routes = [
@@ -32,6 +33,7 @@ export const routes: Routes = [
         {path:"empresas", component: EmpresasComponent},
         {path:"empresas/:id", component: EmpresaDetallesComponent},
         {path:"productos", component: ProductosComponent},
+        {path:"productos/:id", component: ProductoDetallesComponent},
         {path:"reservas", component: ReservasComponent},
         {path:"roles", component: RolesComponent},
         {path:"roles/:id", component: RolDetallesComponent},

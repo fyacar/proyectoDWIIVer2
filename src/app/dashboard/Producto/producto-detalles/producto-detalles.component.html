@@ -1,1 +1,61 @@
-<p>producto-detalles works!</p>
+<div class="contenedorPrincipal">
+    <div class="module-header">
+        <div class="left">
+            <h1>{{ formTitulo }}</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="form-container">
+        <form class="form" [formGroup]="productoForm">
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input matInput name="id" formControlName="id" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nombres</mat-label>
+                <input matInput name="nombres" formControlName="nombres" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Descripción</mat-label>
+                <input matInput name="descripcion" formControlName="descripcion" />
+            </mat-form-field>            
+
+
+
+            <mat-form-field appearance="outline">
+                <mat-label>idEmpresa</mat-label>
+                <input matInput name="idEmpresa" formControlName="idEmpresa" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Estrellas</mat-label>
+                <input matInput name="estrellas" formControlName="estrellas" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Likes</mat-label>
+                <input matInput name="likes" formControlName="likes" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>Precio Base</mat-label>
+                <input matInput name="preciobase" formControlName="preciobase" />
+            </mat-form-field>            
+            <mat-form-field appearance="outline">
+                <mat-label>Precio Incremento </mat-label>
+                <input matInput name="precioincremento" formControlName="precioincremento" />
+            </mat-form-field>            
+            <mat-form-field appearance="outline">
+                <mat-label>stock</mat-label>
+                <input matInput name="stock" formControlName="stock" />
+            </mat-form-field>
+
+            <mat-checkbox formControlName="isActivo">Activo</mat-checkbox>
+        </form>
+
+        <div class="btnGuardar">
+            <button mat-raised-button color="primary" (click)="guardarProducto()">Guardar</button>
+        </div>
+    </div>
+</div>
