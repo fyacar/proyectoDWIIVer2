@@ -1,1 +1,73 @@
-<p>usuario-detalles works!</p>
+{{usuarioId}}
+<div class="contenedorPrincipal">
+    <div class="module-header">
+        <div class="left">
+            <h1>{{ formTitulo }}</h1>
+        </div>
+    </div>
+    <hr />
+    <div class="form-container">
+        <form class="form" [formGroup]="usuarioForm">
+
+            <mat-form-field appearance="outline">
+                <mat-label>Id</mat-label>
+                <input matInput name="id" formControlName="id" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>Nombres</mat-label>
+                <input matInput name="nombres" formControlName="nombres" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>apellidos</mat-label>
+                <input matInput name="apellidos" formControlName="apellidos" />
+            </mat-form-field> 
+
+            <mat-form-field appearance="outline">
+                <mat-label>dni</mat-label>
+                <input matInput name="dni" formControlName="dni" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>idSexo</mat-label>
+                <input matInput name="idSexo" formControlName="idSexo" />
+            </mat-form-field>
+
+            <mat-form-field appearance="outline">
+                <mat-label>telefono</mat-label>
+                <input matInput name="telefono" formControlName="telefono" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>correo</mat-label>
+                <input matInput name="correo" formControlName="correo" />
+            </mat-form-field>            
+            <mat-form-field appearance="outline">
+                <mat-label>usuario </mat-label>
+                <input matInput name="usuario" formControlName="usuario" />
+            </mat-form-field>            
+            <mat-form-field appearance="outline">
+                <mat-label>password</mat-label>
+                <input matInput name="password" formControlName="password" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>fecha_registro</mat-label>
+                <input matInput name="fecha_registro" formControlName="fecha_registro" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>fecha_nacimiento</mat-label>
+                <input matInput name="fecha_nacimiento" formControlName="fecha_nacimiento" />
+            </mat-form-field>
+            <mat-form-field appearance="outline">
+                <mat-label>idRol</mat-label>
+                <input matInput name="idRol" formControlName="idRol" />
+            </mat-form-field>
+
+            <mat-checkbox formControlName="isActivo">Activo</mat-checkbox>
+        </form>
+
+        <div class="btnGuardar">
+            <button mat-raised-button color="primary" (click)="guardarUsuario()">Guardar</button>
+        </div>
+    </div>
+</div>
