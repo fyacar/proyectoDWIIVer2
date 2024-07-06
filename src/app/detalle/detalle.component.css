@@ -1,6 +1,61 @@
+.contenedor{
+    display: flex;    
+}
+.menuu{
+    display: flex;    
+    flex-direction: column;
+    width: 12%;
+    background-color:black;
+    height: 100vh;   
+    align-items: center;
+    min-width: 130px;
+}
+.menu{
+    display: flex;
+    position: fixed;
+    flex-direction: column;
+    width: 12%;
+    background-color:black;
+    height: 100vh;   
+    align-items: center;
+    min-width: 130px;
+}
+
+.img-logo{
+    border-radius: 100%;
+    width: 50px;
+    height: 60px;
+    margin-top: 50px;
+    justify-self: start;
+}
+ul{   
+   list-style-type: none;
+   padding-left: 0;
+   margin-left: 0; 
+   color: white;
+   display: flex;
+   flex-direction: column;
+   justify-content: center;
+   height: 100%;
+   font-size:1.2rem;
+}
+li{
+    margin-bottom: 1.2em;
+}
+li:hover{
+    cursor:pointer;
+    color: red;
+
+}
+.contenido{
+    max-width:100%;
+    margin-left: 4%;
+}
+
 .example-card {    
     width: 100%; 
     max-height: 100vh; 
+    padding: 5px;
   }
 
 .contenedor-imagenes{
@@ -52,4 +107,27 @@ mat-card-actions{
     display: flex;
     justify-content: center;
     
+}
+
+h1{
+    text-align: center;
+}
+.form-container{  
+    margin-top: 40px;  
+    display: flex;
+    flex-direction: column;  
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+mat-form-field{
+    width: 80%;
+    align-self: center;
+}
+.btnGuardar{
+    align-self: center;
+}
+mat-checkbox{
+    margin-left: 10%;
 }

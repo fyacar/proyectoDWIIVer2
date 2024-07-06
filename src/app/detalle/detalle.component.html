@@ -1,7 +1,22 @@
 <body>
+  <div class="contenedor">
+  <div class="menuu"></div>
+  <div class="menu">
+      <img class="img-logo" src="../../../assets/imagenes/logoLogin.jpg">
+      <ul>
+          <li (click)="irInicio()">Inicio</li>
+          <li (click)="irServicios()" >Servicios</li>        
+          <li (click)="irReserva()" >Reserva</li>
+          <li (click)="irDashboard()">Dashboard</li>
+          
+      </ul>
+  </div>
+<div class="contenedor-principal">
+<div class="contenido">
+    <div class="Información">
     <mat-card class="example-card">
         <mat-card-header>         
-          <mat-card-title>Nombre Empresa</mat-card-title>        
+          <mat-card-title>{{producto.nombres}}</mat-card-title>        
         </mat-card-header>
         <div class="contenedor-imagenes">
           <div class="contenedor-img-principal">
@@ -22,21 +37,68 @@
         <div class="contenido">
         <mat-card-content>
           <p>
-            The Shiba Inu is the smallest of the six original and distinct spitz breeds of dog from Japan.
-            A small, agile dog that copes very well with mountainous terrain, the Shiba Inu was originally
-            bred for hunting.
-          </p>
+            {{producto.descripcion}}
+          </p>       
+               
           <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="grade"></mat-icon>
           <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="grade"></mat-icon>
           <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="grade"></mat-icon>
           <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="grade"></mat-icon>
-          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="grade"></mat-icon>
-          
-        </mat-card-content>
-        <mat-card-actions>
-          <button mat-stroked-button>RESERVAR</button>          
-        </mat-card-actions>
-      </div>
+          <mat-icon aria-hidden="false" aria-label="Example home icon" fontIcon="grade"></mat-icon>  
+      </mat-card-content>
+          </div>
 
       </mat-card>
+    </div>
+ </div>
+ <div class="form-container">
+  <form class="form" [formGroup]="reservaForm">
+
+    <mat-form-field appearance="outline">
+        <mat-label>Id</mat-label>
+        <input matInput name="id" formControlName="id" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>fecha_reserva</mat-label>
+        <input matInput name="fecha_reserva" formControlName="fecha_reserva" />
+    </mat-form-field> 
+    <mat-form-field appearance="outline">
+        <mat-label>idusuario</mat-label>
+        <input matInput name="idusuario" formControlName="idusuario" />
+    </mat-form-field> 
+
+    <mat-form-field appearance="outline">
+        <mat-label>idproducto</mat-label>
+        <input matInput name="idproducto" formControlName="idproducto" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>cantPerson</mat-label>
+        <input matInput name="cantPerson" formControlName="cantPerson" />
+    </mat-form-field>
+
+    <mat-form-field appearance="outline">
+        <mat-label>cantDias</mat-label>
+        <input matInput name="cantDias" formControlName="cantDias" />
+    </mat-form-field>
+    <mat-form-field appearance="outline">
+        <mat-label>subTotal</mat-label>
+        <input matInput name="subTotal" formControlName="subTotal" />
+    </mat-form-field>            
+    <mat-form-field appearance="outline">
+        <mat-label>fecha_registro </mat-label>
+        <input matInput name="fecha_registro" formControlName="fecha_registro" />
+    </mat-form-field>            
+    <mat-form-field appearance="outline">
+        <mat-label>idestado</mat-label>
+        <input matInput name="idestado" formControlName="idestado" />
+    </mat-form-field>           
+</form>
+<div class="btnGuardar">
+  <button mat-raised-button color="primary" (click)="guardarReserva()">Reservar</button>
+</div>
+ </div>
+</div>
+</div>
 </body>

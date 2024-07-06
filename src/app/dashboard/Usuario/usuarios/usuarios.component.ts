@@ -100,9 +100,9 @@ export class UsuariosComponent {
   
     /*
       ngOnInit(): void {
-        this.productosService.getAllProductos().subscribe((data) =>{
+        this.usuarioService.getAllUsuarios().subscribe((data) =>{
           console.log(data);
-          this.productos =data;
+          this.usuarios =data;
         } );
       }  
   */ 

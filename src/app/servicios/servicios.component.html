@@ -1,18 +1,18 @@
 <body>
-<div class="contenedor">
-<div class="menuu"></div>
-<div class="menu">
-    <img class="img-logo" src="../../../assets/imagenes/logoLogin.jpg">
-    <ul>
+  <div class="contenedor">
+    <div class="menuu"></div>
+    <div class="menu">
+      <img class="img-logo" src="../../../assets/imagenes/logoLogin.jpg" />
+      <ul>
         <li (click)="irInicio()">Inicio</li>
-        <li (click)="irServicios()" >Servicios</li>        
-        <li (click)="irReserva()" >Reserva</li>
+        <li (click)="irServicios()">Servicios</li>
+        <li (click)="irReserva()">Reserva</li>
         <li (click)="irDashboard()">Dashboard</li>
-    </ul>
-</div>
+      </ul>
+    </div>
 
-<div class="contenido">
- <!-- Combobox
+    <div class="contenido">
+      <!-- Combobox
     <mat-form-field>
         <mat-label>Favorite food</mat-label>
         <mat-select [(ngModel)]="selectedValue" name="food">
@@ -22,43 +22,47 @@
         </mat-select>
     </mat-form-field>   
 -->
-    <form class="example-form buscador">
+      <form class="example-form buscador">
         <mat-form-field class="example-full-width">
           <mat-label>Entrada</mat-label>
-          <input matInput placeholder="Ex. Pizza" value="">
-        </mat-form-field> 
+          <input matInput placeholder="Ex. Pizza" value="" />
+        </mat-form-field>
         <mat-form-field class="example-full-width">
-            <mat-label>Entrada</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="">
-        </mat-form-field> 
+          <mat-label>Entrada</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="" />
+        </mat-form-field>
         <mat-form-field class="example-full-width">
-            <mat-label>Entrada</mat-label>
-            <input matInput placeholder="Ex. Pizza" value="">
-        </mat-form-field> 
+          <mat-label>Entrada</mat-label>
+          <input matInput placeholder="Ex. Pizza" value="" />
+        </mat-form-field>
         <button class="btn-buscar" mat-raised-button>BUSCAR</button>
-    </form>
+      </form>
 
-<div class="cards-section"> 
-    <div class="cards-contenedor">
-    @for (item of foods; track $index) {
-    <mat-card class="example-card">
-        <mat-card-header>          
-          <mat-card-title>Nombre Empresa</mat-card-title>         
-        </mat-card-header>
-        <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="Photo of a Shiba Inu">
-        <mat-card-content>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. 
-          </p>
-        </mat-card-content>
-        <mat-card-actions>          
-          <button mat-button>Reservar</button>
-        </mat-card-actions>
-    </mat-card>
-}
+      <div class="cards-section">
+        <div class="cards-contenedor">
+          @for (item of productos; track $index) {
+          <mat-card class="example-card">
+            <mat-card-header>
+              <mat-card-title>{{ item.nombres }}</mat-card-title>
+            </mat-card-header>
+            <img
+              mat-card-image
+              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
+              alt="Photo of a Shiba Inu"
+            />
+            <mat-card-content>
+              <p>{{ item.descripcion }}</p>
+            </mat-card-content>
+
+            <mat-card-actions>
+              <button (click)="irServicioDetalle(item.id)" mat-button>
+                Reservar
+              </button>
+            </mat-card-actions>
+          </mat-card>
+          }
+        </div>
+      </div>
     </div>
-   
-</div>
-</div>
-</div>
-
+  </div>
 </body>

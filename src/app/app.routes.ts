@@ -2,7 +2,6 @@ import { Routes } from '@angular/router';
 import { LoginComponent } from './Auth/login/login.component';
 import { ServiciosComponent } from './servicios/servicios.component';
 import { DetalleComponent } from './detalle/detalle.component';
-import { ReservaComponent } from './reserva/reserva.component';
 import { DashboardComponent } from './dashboard/dashboard.component';
 import { InicioComponent } from './inicio/inicio.component';
 import { CategoriasComponent } from './dashboard/Categoria/categorias/categorias.component';
@@ -19,14 +18,15 @@ import { EmpresaDetallesComponent } from './dashboard/Empresa/empresa-detalles/e
 import { ProductoDetallesComponent } from './dashboard/Producto/producto-detalles/producto-detalles.component';
 import { UsuarioDetallesComponent } from './dashboard/Usuario/usuario-detalles/usuario-detalles.component';
 import { ReservaDetallesComponent } from './dashboard/Reserva/reserva-detalles/reserva-detalles.component';
+import { ReservacionComponent } from './reservacion/reservacion.component';
 
 
 export const routes: Routes = [
     { path: "inicio", component: InicioComponent},
     { path: "login", component: LoginComponent},
     { path: "servicios", component: ServiciosComponent},
-    { path: "detalle", component: DetalleComponent},
-    { path: "reserva", component: ReservaComponent},
+    { path: "servicios/:id", component: DetalleComponent},
+    { path: "reservacion", component: ReservacionComponent},
     { path: "dashboard", component: DashboardComponent, children: [
         {path:"categorias", component: CategoriasComponent},
         {path:"categorias/:id", component: CategoriaDetalleComponent},
