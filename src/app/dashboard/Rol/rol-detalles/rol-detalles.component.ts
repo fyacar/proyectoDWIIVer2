@@ -45,7 +45,7 @@ export class RolDetallesComponent {
 
   formulario():FormGroup{
     return new FormGroup({
-      idrol: new FormControl(""),
+      /*idrol: new FormControl(""),*/
       descripcion: new FormControl("") ,       
       isActivo: new FormControl(false) ,
     })
@@ -54,8 +54,8 @@ export class RolDetallesComponent {
 
   cargarRol(rolId:number):void{
     this.rolService.getRolById(rolId).subscribe((data)=>{
-      const{ idrol,descripcion,isActivo} = data
-      this.rolForm.setValue({idrol,descripcion,isActivo})
+      const{ /*idrol,*/descripcion,isActivo} = data
+      this.rolForm.setValue({/*idrol,*/descripcion,isActivo})
     })
   }
 

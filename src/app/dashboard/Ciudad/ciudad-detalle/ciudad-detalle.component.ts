@@ -42,15 +42,15 @@ export class CiudadDetalleComponent {
 
     formulario():FormGroup{
       return new FormGroup({
-        id: new FormControl(""),
+        /*id: new FormControl(""),*/
         nombres: new FormControl("")        
       })
     }
 
     cargarCiudad(ciudaId:number):void{
       this.ciudadService.getCiudadById(ciudaId).subscribe((data)=>{
-        const{ id,nombres} = data
-        this.ciudadForm.setValue({id,nombres})
+        const{ /*id,*/nombres} = data
+        this.ciudadForm.setValue({/*id,*/nombres})
       })
     }
 

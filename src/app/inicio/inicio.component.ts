@@ -14,7 +14,6 @@ export class InicioComponent {
   constructor(private router: Router,    
   ){ }
 
-
   irServicios():void{    
     this.router.navigate(["servicios"])
   }

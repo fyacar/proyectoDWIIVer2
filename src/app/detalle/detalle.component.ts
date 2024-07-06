@@ -47,7 +47,8 @@ export class DetalleComponent {
 
     formulario():FormGroup{
       return new FormGroup({
-        id: new FormControl(""),
+        /*
+        id: new FormControl(""), */
         fecha_reserva: new FormControl("") ,
         idusuario: new FormControl("") ,  
         idproducto: new FormControl("") ,  

@@ -46,7 +46,7 @@ export class EmpresaDetallesComponent {
 
   formulario():FormGroup{
     return new FormGroup({
-      id: new FormControl(""),
+      /*id: new FormControl(""),*/      
       nombres: new FormControl("") ,
       descripcion: new FormControl("") ,  
       idCategoria: new FormControl("") ,  
@@ -59,8 +59,8 @@ export class EmpresaDetallesComponent {
 
   cargarEmpresa(empresaId:number):void{
     this.empresaService.getEmpresaById(empresaId).subscribe((data)=>{
-      const{ id,nombres,descripcion,idCategoria,estrellas,likes,idCiudad,isActivo} = data
-      this.empresaForm.setValue({ id,nombres,descripcion,idCategoria,estrellas,likes,idCiudad,isActivo})
+      const{ /*id,*/nombres,descripcion,idCategoria,estrellas,likes,idCiudad,isActivo} = data
+      this.empresaForm.setValue({ /*id,*/nombres,descripcion,idCategoria,estrellas,likes,idCiudad,isActivo})
     })
   }
 

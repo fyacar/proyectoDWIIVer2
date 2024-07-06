@@ -45,7 +45,8 @@ export class ReservaDetallesComponent {
 
   formulario():FormGroup{
     return new FormGroup({
-      id: new FormControl(""),
+      /*
+      id: new FormControl(""),*/
       fecha_reserva: new FormControl("") ,
       idusuario: new FormControl("") ,  
       idproducto: new FormControl("") ,  
@@ -58,8 +59,8 @@ export class ReservaDetallesComponent {
   }
   cargarReserva(reservaId:number):void{
     this.reservaService.getReservaById(reservaId).subscribe((data)=>{
-      const{ id,fecha_reserva,idusuario,idproducto,cantPerson,cantDias,subTotal, fecha_registro,idestado} = data
-      this.reservaForm.setValue({ id,fecha_reserva,idusuario,idproducto,cantPerson,cantDias,subTotal, fecha_registro,idestado})
+      const{ /*id,*/fecha_reserva,idusuario,idproducto,cantPerson,cantDias,subTotal, fecha_registro,idestado} = data
+      this.reservaForm.setValue({ /*id,*/fecha_reserva,idusuario,idproducto,cantPerson,cantDias,subTotal, fecha_registro,idestado})
     })
   }
 

@@ -1,4 +1,5 @@
 .contenedor{
+    
     display: flex;   
     
 }
@@ -58,6 +59,9 @@ li:hover{
     width: 100%;
     gap: 15;
 }
+h1{
+    text-align: center;
+}
 .example-full-width{
     margin-top: 15px;
     margin-right: 15px;
@@ -68,6 +72,7 @@ li:hover{
   }
   
 .card-section{
+    
     max-width: 100%;
 }
 .cards-contenedor{
@@ -76,4 +81,6 @@ li:hover{
     flex-wrap: wrap;
     gap: 1em;
     max-width: 100%;
+    margin-top: 40px;
+    margin-left: 15px;
 }

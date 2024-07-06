@@ -19,6 +19,7 @@ import { ProductoDetallesComponent } from './dashboard/Producto/producto-detalle
 import { UsuarioDetallesComponent } from './dashboard/Usuario/usuario-detalles/usuario-detalles.component';
 import { ReservaDetallesComponent } from './dashboard/Reserva/reserva-detalles/reserva-detalles.component';
 import { ReservacionComponent } from './reservacion/reservacion.component';
+import { CrearUsuarioComponent } from './crear-usuario/crear-usuario.component';
 
 
 export const routes: Routes = [
@@ -27,6 +28,7 @@ export const routes: Routes = [
     { path: "servicios", component: ServiciosComponent},
     { path: "servicios/:id", component: DetalleComponent},
     { path: "reservacion", component: ReservacionComponent},
+    {path:"crearusuario", component: CrearUsuarioComponent},
     { path: "dashboard", component: DashboardComponent, children: [
         {path:"categorias", component: CategoriasComponent},
         {path:"categorias/:id", component: CategoriaDetalleComponent},
@@ -42,5 +44,6 @@ export const routes: Routes = [
         {path:"roles/:id", component: RolDetallesComponent},
         {path:"usuarios", component: UsuariosComponent},
         {path:"usuarios/:id", component: UsuarioDetallesComponent}
+       
     ]},
 ];

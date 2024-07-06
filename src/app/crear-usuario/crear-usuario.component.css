@@ -1,0 +1,21 @@
+h1{
+    text-align: center;
+}
+.form-container{
+    display: flex;
+    flex-direction: column;  
+}
+.form{
+    display: flex;
+    flex-direction: column;
+}
+mat-form-field{
+    width: 80%;
+    align-self: center;
+}
+.btnGuardar{
+    align-self: center;
+}
+mat-checkbox{
+    margin-left: 10%;
+}

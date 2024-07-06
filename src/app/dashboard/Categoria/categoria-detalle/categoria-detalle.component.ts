@@ -42,7 +42,7 @@ export class CategoriaDetalleComponent {
 
   formulario():FormGroup{
     return new FormGroup({
-      id: new FormControl(""),
+      /*      id: new FormControl(""),*/      
       nombres : new FormControl(""),
       descripcion: new FormControl("") ,       
       isActivo: new FormControl(false) ,

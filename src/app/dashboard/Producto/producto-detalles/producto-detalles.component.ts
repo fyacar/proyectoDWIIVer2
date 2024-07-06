@@ -44,7 +44,8 @@ export class ProductoDetallesComponent {
 
   formulario():FormGroup{
     return new FormGroup({
-      id: new FormControl(""),
+      /*
+      id: new FormControl(""),*/
       nombres: new FormControl("") ,
       descripcion: new FormControl("") ,  
       idEmpresa: new FormControl("") ,  
@@ -59,8 +60,8 @@ export class ProductoDetallesComponent {
 
   cargarProducto(productoId:number):void{
     this.productoService.getProductoById(productoId).subscribe((data)=>{
-      const{ id,nombres,descripcion,idEmpresa,estrellas,likes,preciobase, precioincremento,stock,isActivo} = data
-      this.productoForm.setValue({ id,nombres,descripcion,idEmpresa,estrellas,likes,preciobase, precioincremento,stock,isActivo})
+      const{ /*id,*/nombres,descripcion,idEmpresa,estrellas,likes,preciobase, precioincremento,stock,isActivo} = data
+      this.productoForm.setValue({ /*id,*/nombres,descripcion,idEmpresa,estrellas,likes,preciobase, precioincremento,stock,isActivo})
     })
   }
 

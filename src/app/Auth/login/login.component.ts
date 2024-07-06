@@ -21,4 +21,9 @@ export class LoginComponent {
     this.router.navigateByUrl("/dashboard")
   }
 
+
+  irCrearUsuario(){
+    this.router.navigateByUrl("/crearusuario")
+  }
+
 }
