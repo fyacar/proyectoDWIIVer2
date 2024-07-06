@@ -43,7 +43,8 @@ export const routes: Routes = [
         {path:"roles", component: RolesComponent},
         {path:"roles/:id", component: RolDetallesComponent},
         {path:"usuarios", component: UsuariosComponent},
-        {path:"usuarios/:id", component: UsuarioDetallesComponent}
-       
-    ]},
+        {path:"usuarios/:id", component: UsuarioDetallesComponent}       
+    ]},  
+    {path:"", redirectTo: "login", pathMatch: "full"},
+    /* {path:"**", component: } */
 ];

@@ -8,6 +8,7 @@
         <li (click)="irServicios()">Servicios</li>
         <li (click)="irReserva()">Reserva</li>
         <li (click)="irDashboard()">Dashboard</li>
+        <li (click)="cerrarSesion()">Cerrar Sesión</li>
       </ul>
     </div>
 
@@ -45,12 +46,12 @@
           @for (item of productos; track $index) {
           <mat-card class="example-card">
             <mat-card-header>
-              <mat-card-title>{{ item.nombres }}</mat-card-title>
+              <mat-card-title>{{ item.nombres }}</mat-card-title>            
             </mat-card-header>
             <img
               mat-card-image
-              src="https://material.angular.io/assets/img/examples/shiba2.jpg"
-              alt="Photo of a Shiba Inu"
+              [src]="'../../assets/imagenes/producto' + item.id + '.jpg'"
+              alt="Photo of a Shiba Inu "
             />
             <mat-card-content>
               <p>{{ item.descripcion }}</p>

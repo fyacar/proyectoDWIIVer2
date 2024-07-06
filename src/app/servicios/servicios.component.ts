@@ -5,6 +5,7 @@ import { FormsModule } from '@angular/forms';
 import { Reserva } from '../dashboard/Reserva/reserva';
 import { Producto } from '../dashboard/Producto/producto';
 import { ProductoService } from '../dashboard/Producto/Producto-Service/producto.service';
+import { AuthService } from '../Auth/auth.service';
 
 @Component({
   selector: 'app-servicios',
@@ -76,24 +77,13 @@ export class ServiciosComponent {
         precioincremento: 5,
         stock: 15,
         isActivo: true
-    },
-    {
-      id:6,
-      nombres: 'Tour por la Ciudad',
-      descripcion: 'Tour guiado por los puntos turísticos de la ciudad.',
-      idEmpresa: 105,
-      estrellas: 4,
-      likes: 180,
-      preciobase: 30,
-      precioincremento: 5,
-      stock: 15,
-      isActivo: true
-  }
+    }
+
 ];
 
 
   constructor(private router: Router,
-    private route:ActivatedRoute, private productoService : ProductoService
+    private route:ActivatedRoute, private productoService : ProductoService, private authService : AuthService
   ){ }
 
   ngOnInit(): void {
@@ -122,6 +112,10 @@ export class ServiciosComponent {
   }
   irServicioDetalle(reservaId:number):void{    
     this.router.navigate([reservaId],{relativeTo: this.route});
+  }
+  cerrarSesion():void{
+    this.authService.logout();
+    this.router.navigateByUrl("/login")
   }
 
 }
